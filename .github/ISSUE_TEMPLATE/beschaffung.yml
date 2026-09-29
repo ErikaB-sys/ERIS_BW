@@ -1,7 +1,8 @@
 name: Beschaffung
 description: Beschaffung eines Fahrzeugs, Bauteils, Materials oder einer Dienstleistung dokumentieren
 title: "[Beschaffung] "
-labels: ["Backlog"]
+labels:
+  - Backlog
 body:
   - type: markdown
     attributes:
@@ -67,7 +68,7 @@ body:
     id: budget
     attributes:
       label: Budget
-      description: Falls vorhanden: vorgesehenes Budget oder Kostenrahmen.
+      description: "Falls vorhanden: vorgesehenes Budget oder Kostenrahmen."
       placeholder: z. B. maximal 150 EUR
 
   - type: dropdown
