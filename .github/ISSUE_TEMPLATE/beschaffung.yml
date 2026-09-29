@@ -1,8 +1,7 @@
 name: Beschaffung
 description: Beschaffung eines Fahrzeugs, Bauteils, Materials oder einer Dienstleistung dokumentieren
 title: "[Beschaffung] "
-labels:
-  - Backlog
+labels: ["Backlog"]
 body:
   - type: markdown
     attributes:
