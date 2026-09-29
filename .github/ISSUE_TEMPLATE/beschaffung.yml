@@ -1,0 +1,120 @@
+name: Beschaffung
+description: Beschaffung eines Fahrzeugs, Bauteils, Materials oder einer Dienstleistung dokumentieren
+title: "[Beschaffung] "
+labels:
+  - Backlog
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Beschaffung
+        Bitte alle verfügbaren Angaben eintragen. Unbekannte Angaben können zunächst offen bleiben.
+
+  - type: input
+    id: was
+    attributes:
+      label: Was wird beschafft?
+      description: Artikel, Fahrzeug, Bauteil, Ersatzteil oder konkrete Dienstleistung.
+      placeholder: z. B. Roco BR 150, Glockenankermotor, Lackierung
+    validations:
+      required: true
+
+  - type: input
+    id: wo
+    attributes:
+      label: Wo wird beschafft?
+      description: Händler, Hersteller, Werkstatt, Anbieter oder Fundort.
+      placeholder: z. B. Händlername, Hersteller, eBay, Werkstatt
+    validations:
+      required: true
+
+  - type: input
+    id: preis
+    attributes:
+      label: Preis
+      description: Kaufpreis bzw. erwartete Kosten einschließlich Währung.
+      placeholder: z. B. 129,00 EUR
+    validations:
+      required: true
+
+  - type: dropdown
+    id: art
+    attributes:
+      label: Art der Beschaffung
+      options:
+        - Kauf
+        - Dienstleistung
+        - Kauf inklusive Dienstleistung
+        - Leihgabe
+        - Sonstiges
+    validations:
+      required: true
+
+  - type: textarea
+    id: zweck
+    attributes:
+      label: Zweck / Verwendung
+      description: Wofür wird die Beschaffung benötigt?
+      placeholder: Beschreibe kurz den vorgesehenen Einsatz.
+
+  - type: input
+    id: anbieter
+    attributes:
+      label: Anbieter / Quelle
+      description: Optionaler Ansprechpartner, Artikelnummer oder Link.
+      placeholder: Anbieter, Artikelnummer, URL
+
+  - type: input
+    id: budget
+    attributes:
+      label: Budget
+      description: Falls vorhanden: vorgesehenes Budget oder Kostenrahmen.
+      placeholder: z. B. maximal 150 EUR
+
+  - type: dropdown
+    id: dringend
+    attributes:
+      label: Dringlichkeit
+      options:
+        - Nicht dringend
+        - Normal
+        - Zeitnah
+        - Dringend
+    validations:
+      required: true
+
+  - type: input
+    id: termin
+    attributes:
+      label: Gewünschter Termin
+      description: Bis wann wird die Beschaffung benötigt? Optional.
+      placeholder: z. B. bis Ende Oktober 2026
+
+  - type: textarea
+    id: alternativen
+    attributes:
+      label: Alternativen / Vergleichsangebote
+      description: Gibt es andere Anbieter, Produkte oder Lösungen?
+      placeholder: Vergleichsangebote oder Alternativen hier eintragen.
+
+  - type: textarea
+    id: begruendung
+    attributes:
+      label: Begründung / Entscheidungskriterien
+      description: Was spricht für diese Beschaffung? Welche Anforderungen müssen erfüllt sein?
+
+  - type: textarea
+    id: notizen
+    attributes:
+      label: Weitere Informationen
+      description: Alles, was für die Beschaffung wichtig ist.
+
+  - type: checkboxes
+    id: freigabe
+    attributes:
+      label: Status
+      options:
+        - label: Beschaffung ist abgestimmt
+        - label: Preis wurde geprüft
+        - label: Bestellung / Auftrag wurde ausgelöst
+        - label: Beschaffung ist abgeschlossen
