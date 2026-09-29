@@ -1,0 +1,156 @@
+name: Decoder – Decoder auswählen
+description: Decoder anhand der tatsächlich benötigten Funktionen und elektrischen Anforderungen auswählen
+title: "[Decoder] "
+labels: ["Backlog"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🚂 Lokomotive
+
+        Dieses Formular ermittelt zunächst die Anforderungen.
+        Der Decoder wird anschließend anhand dieser Anforderungen ausgewählt.
+
+  - type: input
+    id: baureihe
+    attributes:
+      label: Baureihe
+      placeholder: z. B. BR 150
+
+  - type: input
+    id: betriebsnummer
+    attributes:
+      label: Betriebsnummer
+      placeholder: z. B. 150 022-2
+
+  - type: input
+    id: artikelnummer
+    attributes:
+      label: Hersteller / Artikelnummer
+      placeholder: z. B. Roco 43429
+
+  - type: markdown
+    attributes:
+      value: |
+        ### ⚙️ Antrieb
+
+  - type: input
+    id: motorstrom
+    attributes:
+      label: Motorstrom
+      placeholder: z. B. 250 mA
+
+  - type: input
+    id: gesamtstrom
+    attributes:
+      label: Erwarteter maximaler Gesamtstrom
+      placeholder: Motor + Beleuchtung + sonstige Verbraucher
+
+  - type: markdown
+    attributes:
+      value: |
+        ### 💡 Beleuchtung und Funktionen
+
+  - type: input
+    id: lichtfunktionen
+    attributes:
+      label: Benötigte Lichtfunktionen
+      placeholder: Weiß vorne/hinten, Rot vorne/hinten, Führerstände, Maschinenraum
+
+  - type: input
+    id: weitere_funktionen
+    attributes:
+      label: Weitere benötigte Funktionen
+      placeholder: Pantograph, Kupplung, Lüfter etc.
+
+  - type: input
+    id: funktionsausgaenge
+    attributes:
+      label: Benötigte Funktionsausgänge
+      placeholder: z. B. 10
+
+  - type: markdown
+    attributes:
+      value: |
+        ### 🔊 Sound
+
+  - type: dropdown
+    id: sound
+    attributes:
+      label: Sound benötigt?
+      options:
+        - Nein
+        - Ja
+
+  - type: input
+    id: lautsprecher
+    attributes:
+      label: Lautsprecher
+      placeholder: z. B. 11 x 15 mm / 4–8 Ohm
+
+  - type: markdown
+    attributes:
+      value: |
+        ### 🔋 Energiespeicher
+
+  - type: dropdown
+    id: puffer
+    attributes:
+      label: Energiespeicher / Puffer benötigt?
+      options:
+        - Nein
+        - Ja, kleiner Puffer
+        - Ja, größerer Energiespeicher
+
+  - type: input
+    id: puffer_bauraum
+    attributes:
+      label: Verfügbarer Bauraum für Energiespeicher
+      placeholder: z. B. 20 x 10 x 5 mm
+
+  - type: markdown
+    attributes:
+      value: |
+        ### 🔌 Decoder / Einbau
+
+  - type: dropdown
+    id: schnittstelle
+    attributes:
+      label: Bevorzugte Schnittstelle
+      options:
+        - PluX22
+        - Next18
+        - 21MTC
+        - Kabeldecoder
+        - Noch offen
+
+  - type: input
+    id: decoder_bauraum
+    attributes:
+      label: Verfügbarer Decoder-Bauraum
+      placeholder: z. B. 30 x 15 x 5 mm
+
+  - type: input
+    id: reserve
+    attributes:
+      label: Gewünschte Reserve
+      placeholder: z. B. 2 zusätzliche Funktionsausgänge
+
+  - type: textarea
+    id: besonderheiten
+    attributes:
+      label: Besondere Anforderungen
+      placeholder: Mechanische, elektrische oder bauliche Besonderheiten
+
+  - type: textarea
+    id: decoderentscheidung
+    attributes:
+      label: Decoderentscheidung
+      placeholder: Wird nach Ermittlung der Anforderungen ausgefüllt.
+
+  - type: textarea
+    id: notizen
+    attributes:
+      label: Notizen
+      placeholder: Freitext für weitere Informationen, Messwerte oder Links.
