@@ -1,0 +1,29 @@
+name: Feature Request
+description: Schlage eine neue Funktion, Erweiterung oder Verbesserung vor
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Danke, dass du eine Idee beiträgst! Bitte beschreibe dein Feature möglichst klar und vollständig.
+  - type: textarea
+    id: description
+    attributes:
+      label: Beschreibung
+      description: Was möchtest du hinzufügen oder verbessern? Warum ist es nützlich?
+      placeholder: Eine kurze Beschreibung der Funktion...
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Kontext / Anwendung
+      description: In welchem Zusammenhang oder Modul der Anlage/Software soll das Feature wirken?
+      placeholder: z. B. betrifft Gleisbild, Kehrschleifensteuerung, BfB-Modul...
+  - type: input
+    id: related_issues
+    attributes:
+      label: Verwandte Issues
+      description: Gibt es verwandte oder blockierende Issues? (optional)
+      placeholder: z. B. #42
