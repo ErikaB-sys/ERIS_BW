@@ -1,0 +1,96 @@
+name: Lok – Neue Lok erfassen
+description: Lege eine neue Lok an und dokumentiere ihre Eigenschaften
+title: "[Lok] "
+labels: ["lok"]
+
+body:
+  - type: input
+    id: lokname
+    attributes:
+      label: Lokname / Betriebsnummer
+      placeholder: z. B. Tm 2/2 16 oder U37 002
+
+  - type: input
+    id: vandor
+    attributes:
+      label: Hersteller
+      placeholder: z. B. Bemo  Liliput 
+
+  - type: dropdown
+    id: zustand
+    attributes:
+      label: Zustand
+      options:
+        - Neu
+        - Gebraucht
+        - Eigenbau
+      default: 0
+
+  - type: dropdown
+    id: gesellschaft
+    attributes:
+      label: Gesellschaft
+      options:
+        - UKB (Utzbacher Kreisbahn)
+        - UVB ( Utzbacher Verkehrsbetriebe)
+        - BFB (Burgfräulein Bahn)
+        - FELDBAHN 
+        - Vollspur
+      default: 0
+
+  - type: dropdown
+    id: spur
+    attributes:
+      label: Spur
+      options:
+        - H0
+        - H0m
+        - H0e
+      default: 0
+
+  - type: markdown
+    attributes:
+      value: |
+        ### Digitalisierung
+
+  - type: input
+    id: decoder
+    attributes:
+      label: Decoder (Typ, Status)
+      placeholder: z. B. D&H SD10 – geplant
+
+  - type: input
+    id: adresse
+    attributes:
+      label: Adresse
+      placeholder: z. B. 10
+
+  - type: input
+    id: funktionen
+    attributes:
+      label: Funktionen
+      placeholder: z. B. Licht, Kupplung, Sound etc.
+
+  - type: textarea
+    id: umbauten
+    attributes:
+      label: Geplante Umbauten / Besonderheiten
+      placeholder: z. B. Lichtumbau, elektrische Kupplung, etc.
+
+  - type: textarea
+    id: inbetriebnahme
+    attributes:
+      label: Inbetriebnahme
+      placeholder:  z. B. datum 
+
+  - type: textarea
+    id: lastevent
+    attributes:
+      label: Letzter Stand
+      placeholder: letzte anmerkung ( vormerken für issues ) 
+
+  - type: textarea
+    id: sonstiges
+    attributes:
+      label: Notizen
+      placeholder: Freitextfeld für alles andere Bilder (optional Link einfügen, wenn vorhanden)
